@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Hợp nhất 2 mảng rồi sắp  -->
+    <script>
+        //bài 1 hợp nhất 2 mảng sau đó sắp xếp
+        // let list1=[1,2,4];
+        // let list2=[1,3,4];
+        // function sapXep2Mang(m1,m2){
+        // let list3=[...m1,...m2];
+        // list3.sort((a,b)=>a-b);
+        // console.log(list3);
+        // }
+        // sapXep2Mang(list1,list2)
+
+
+
+        //Bài 2 tìm tổng 2 số bằng 1 số cho trước sau đó in ra vị trí trong mảng
+        // let nums=[1,1,4,5,1,7];
+        // let target=9;
+        // function timViTri(nums1,target1){
+        // let tim=nums1.find((a,b)=>{
+        // if((a+nums1[b+1])==target){
+        // console.log("Vị trí của 2 phần tử liên tiếp có tổng bằng",target," là :",[b,b+1]);};
+        // return (a+nums1[b+1])==target;})
+        // if(tim==undefined){
+        // console.log("Trong mảng không có 2 phần tử liên tiếp nào có tổng bằng",target);}}
+        // timViTri(nums,target)
+
+
+
+        //   bài 3 tìm ra điểm chung giữa các phần tử
+        let strs=["canh","canh","caqnh"];
+        function timPhanTu(strs1){
+        if(strs1.length>1){
+        let common = strs1[0].split("");//f s o
+        for(let i = 1; i < strs1.length; i++) {
+        common = strs1[i].split('').filter(function (n,m) {
+        return common[m]==n;
+        }).join('');}
+        for(let i = 1; i < strs1.length; i++) {
+        common = strs1[i].split('').filter(function (n,m) {
+        return common[m]==n;
+        }).join('');}
+        if(common!=""){
+        console.log("Phần tử trùng nhau của mảng là:",common);}
+        if(common==""){console.log("Các phần tử không có giá trị trùng nhau");}}
+        else{console.log("Các phần tử không có giá trị trùng nhau");}}
+        timPhanTu(strs);
+
+    </script>
+</body>
+</html>
